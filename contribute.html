@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>איך מוסיפים תוסף</title>
+    <meta
+      name="description"
+      content="מדריך קצר וברור להוספת תוסף חדש לחנות התוספים של אוצריא."
+    >
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="index.html" aria-label="חזרה לחנות">
+            <span class="brand__mark"></span>
+            <span class="brand__text">Otzaria Plugins</span>
+          </a>
+          <a class="header-link" href="index.html">חזרה לחנות</a>
+        </div>
+      </header>
+
+      <main class="page-main page-main--narrow">
+        <article class="plugin-page">
+          <a class="button button--ghost plugin-page__back" href="index.html">חזרה לחנות</a>
+
+          <section class="plugin-page__sections">
+            <div class="plugin-section">
+              <h1>איך מוסיפים תוסף חדש</h1>
+              <p>
+                לא צריך לגעת במבנה האתר. מוסיפים תמונה, מעדכנים את
+                <code>data/plugins.json</code>, וזהו.
+              </p>
+            </div>
+
+            <div class="plugin-section">
+              <h2>שלב 1: מעלים תמונות</h2>
+              <p>
+                שמים את קובץ התמונה הראשי, ואם צריך גם צילומי מסך, בתוך
+                <code>assets/images/</code>.
+              </p>
+            </div>
+
+            <div class="plugin-section">
+              <h2>שלב 2: מוסיפים אובייקט ל־JSON</h2>
+              <p>
+                פותחים את <code>data/plugins.json</code> ומוסיפים תוסף חדש לרשימה.
+                אם זה התוסף הראשון, מחליפים את <code>[]</code> ברשימה עם אובייקט
+                אחד.
+              </p>
+              <pre class="code-block"><code>[
+  {
+    "id": "my-plugin",
+    "name": "השם של התוסף",
+    "shortDescription": "תיאור קצר שיופיע בקוביה.",
+    "description": "תיאור מלא שיופיע בעמוד התוסף.",
+    "version": "1.0.0",
+    "status": "stable",
+    "author": "שם המפתח או הצוות",
+    "updatedAt": "2026-04-28",
+    "compatibleWith": "0.9.88 ומעלה",
+    "tags": ["חיפוש", "כלים"],
+    "image": "assets/images/my-plugin.svg",
+    "screenshots": [],
+    "downloadUrl": "https://github.com/USER/REPO/releases/latest/download/plugin.zip",
+    "homepage": "https://github.com/USER/REPO",
+    "installInstructions": [
+      "מורידים את קובץ התוסף.",
+      "פותחים את מסך התוספים בתוכנה.",
+      "בוחרים התקנה מקובץ.",
+      "מאשרים ומפעילים מחדש אם צריך."
+    ]
+  }
+]</code></pre>
+            </div>
+
+            <div class="plugin-section">
+              <h2>שלב 3: בודקים 4 דברים</h2>
+              <ol class="plugin-list">
+                <li>שהתמונה נטענת.</li>
+                <li>שכפתור ההורדה עובד.</li>
+                <li>שעמוד התוסף נפתח.</li>
+                <li>שאין שגיאת JSON בגלל פסיק מיותר.</li>
+              </ol>
+            </div>
+
+            <div class="plugin-section">
+              <h2>כללים קצרים</h2>
+              <ol class="plugin-list">
+                <li><code>id</code> צריך להיות באנגלית, בלי רווחים, ועדיף עם מקפים.</li>
+                <li><code>status</code> צריך להיות <code>stable</code>, <code>beta</code> או <code>experimental</code>.</li>
+                <li><code>downloadUrl</code> צריך להיות קישור אמיתי וישיר.</li>
+                <li>לא מוסיפים תוספי דמה.</li>
+              </ol>
+            </div>
+          </section>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>חנות התוספים של אוצריא</title>
+    <meta
+      name="description"
+      content="חנות תוספים פשוטה, נקייה ונוחה להתקנה עבור אוצריא."
+    >
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="index.html" aria-label="חזרה לעמוד הראשי">
+            <span class="brand__mark"></span>
+            <span class="brand__text">Otzaria Plugins</span>
+          </a>
+          <a class="header-link" href="contribute.html">איך מוסיפים תוסף?</a>
+        </div>
+      </header>
+
+      <main class="page-main">
+        <section class="hero-card">
+          <div class="hero-card__content">
+            <span class="eyebrow">חנות תוספים</span>
+            <h1>להרחיב את אוצריא בלי להסתבך</h1>
+            <p>
+              החנות מוכנה לקלוט תוספים אמיתיים בלבד. היא בנויה כך שאפשר להוסיף
+              תוסף חדש מתוך קובץ JSON אחד, בלי לבנות אתר מחדש ובלי לגעת במבנה
+              העמודים.
+            </p>
+            <div class="hero-card__actions">
+              <a class="button button--solid" href="#pluginsGrid">לעיון בתוספים</a>
+              <a class="button button--ghost" href="contribute.html">מדריך לתורמים</a>
+            </div>
+          </div>
+          <div class="hero-card__aside" aria-hidden="true">
+            <div class="stats-card">
+              <span class="stats-card__label">מה יש כאן?</span>
+              <strong id="pluginCount">0 תוספים</strong>
+              <span class="stats-card__muted">עמודים סטטיים, JSON אחד, בלי build מסובך</span>
+            </div>
+            <div class="steps-card">
+              <span>1. מוסיפים תיאור ותמונה</span>
+              <span>2. שומרים ב־JSON</span>
+              <span>3. החנות מתעדכנת אוטומטית</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="toolbar-card" aria-label="כלי חיפוש">
+          <div class="toolbar-card__row">
+            <label class="search-field" for="searchInput">
+              <span class="search-field__label">חיפוש</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="שם, תיאור או תגית..."
+                autocomplete="off"
+              >
+            </label>
+
+            <label class="select-field" for="statusFilter">
+              <span class="search-field__label">סטטוס</span>
+              <select id="statusFilter">
+                <option value="all">הכול</option>
+                <option value="stable">יציב</option>
+                <option value="beta">בטא</option>
+                <option value="experimental">ניסיוני</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="tagsBar" class="tags-bar" aria-label="סינון לפי תגיות"></div>
+        </section>
+
+        <section class="section-heading">
+          <div>
+            <span class="eyebrow">רשימת תוספים</span>
+            <h2>התקנה פשוטה, מראה אחיד</h2>
+          </div>
+          <p id="resultsMeta" class="section-heading__meta">טוען תוספים...</p>
+        </section>
+
+        <section
+          id="pluginsGrid"
+          class="plugins-grid"
+          aria-label="רשימת תוספים"
+        ></section>
+
+        <section id="emptyState" class="empty-state hidden" aria-live="polite">
+          <img
+            class="empty-state__image"
+            src="assets/images/empty-store.svg"
+            alt=""
+          >
+          <h3>עדיין אין כאן תוספים</h3>
+          <p>
+            החנות מוכנה. ברגע שיוסיפו את התוסף הראשון ל־<code>data/plugins.json</code>,
+            הכרטיסים והעמודים יופיעו אוטומטית.
+          </p>
+          <a class="button button--solid" href="contribute.html">איך מוסיפים תוסף ראשון?</a>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/store.js"></script>
+  </body>
+</html>
