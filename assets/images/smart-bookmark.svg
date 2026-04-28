@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">סימניה חכמה</title>
+  <desc id="desc">איור של סימניה, בועת מחשבה ונקודת חזרה ללימוד.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef3ff"/>
+      <stop offset="100%" stop-color="#d9e2ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="720" rx="48" fill="url(#bg)"/>
+  <circle cx="220" cy="140" r="86" fill="#5577d8" opacity="0.15"/>
+  <circle cx="780" cy="580" r="112" fill="#f39c6b" opacity="0.18"/>
+  <rect x="250" y="120" width="430" height="470" rx="34" fill="#fffefc" stroke="#5577d8" stroke-width="12"/>
+  <rect x="330" y="94" width="120" height="250" rx="16" fill="#f39c6b"/>
+  <path d="M330 344l60-48 60 48" fill="#fffefc"/>
+  <rect x="320" y="396" width="290" height="22" rx="11" fill="#d9e2ff"/>
+  <rect x="320" y="442" width="250" height="22" rx="11" fill="#d9e2ff"/>
+  <rect x="320" y="488" width="210" height="22" rx="11" fill="#d9e2ff"/>
+  <g transform="translate(610 240)">
+    <path d="M0 44c0-24 20-44 44-44h100c24 0 44 20 44 44v22c0 24-20 44-44 44H92l-38 30 8-30H44C20 110 0 90 0 66z" fill="#5577d8"/>
+    <circle cx="58" cy="56" r="8" fill="#fffefc"/>
+    <circle cx="94" cy="56" r="8" fill="#fffefc"/>
+    <circle cx="130" cy="56" r="8" fill="#fffefc"/>
+  </g>
+  <circle cx="728" cy="470" r="54" fill="#2f4d9c"/>
+  <path d="M702 470l18 18 34-46" fill="none" stroke="#fffefc" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+</svg>
