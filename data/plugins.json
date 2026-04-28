@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": "shnayim-mikra",
+    "name": "שניים מקרא ואחד תרגום",
+    "shortDescription": "קריאת פרשת השבוע שניים מקרא ואחד תרגום, עם רש\"י, רמב\"ן וחלוקה לפי עליות.",
+    "description": "תוסף לקריאת פרשת השבוע שניים מקרא ואחד תרגום.\n\nמציג את הפסוקים פסוק-פסוק עם תרגום אונקלוס, ותמיכה בפירושי רש\"י ורמב\"ן. כולל חלוקה לפי עליות. התוסף קורא את הפרשה הנוכחית לפי לוח השנה.",
+    "version": "1.3.0",
+    "status": "stable",
+    "author": "מיתר 33",
+    "updatedAt": "2026-04-27",
+    "compatibleWith": "0.9.88 ומעלה",
+    "tags": ["תורה", "שניים מקרא", "תרגום", "פרשת שבוע"],
+    "image": "assets/images/shnayim-mikra.svg",
+    "screenshots": [],
+    "downloadUrl": "https://raw.githubusercontent.com/Y-PLONI/otzaria_store/main/plugins/shnayim-mikra/shemot.otzplugin",
+    "homepage": "https://otzaria.org/forum/post/14956",
+    "installInstructions": [
+      "מורידים את קובץ התוסף.",
+      "פותחים את מסך התוספים בתוכנה.",
+      "בוחרים 'התקנה מקובץ'.",
+      "מאשרים ומפעילים מחדש אם צריך."
+    ]
+  }
+]
