@@ -31,6 +31,29 @@
     return params.get("id");
   }
 
+  function toHebrewLetters(n, isYear) {
+    const ones = ["", "א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט"];
+    const tens = ["", "י", "כ", "ל", "מ", "נ", "ס", "ע", "פ", "צ"];
+    const hundreds = ["", "ק", "ר", "ש", "ת", "תק", "תר", "תש", "תת", "תתק"];
+
+    if (isYear) n = n % 1000;
+
+    const h = Math.floor(n / 100);
+    const remainder = n % 100;
+    const t = Math.floor(remainder / 10);
+    const o = remainder % 10;
+
+    let result = hundreds[h];
+    if (remainder === 15) result += "טו";
+    else if (remainder === 16) result += "טז";
+    else result += tens[t] + ones[o];
+
+    if (result.length === 1) result += "׳";
+    else result = result.slice(0, -1) + "״" + result.slice(-1);
+
+    return result;
+  }
+
   function formatHebrewDate(dateValue) {
     const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateValue || "");
 
@@ -48,12 +71,19 @@
     );
 
     try {
-      return new Intl.DateTimeFormat("he-u-ca-hebrew", {
+      const parts = new Intl.DateTimeFormat("he-u-ca-hebrew", {
         day: "numeric",
         month: "long",
         year: "numeric",
         timeZone: "UTC",
-      }).format(date);
+      }).formatToParts(date);
+
+      const get = (type) => (parts.find((p) => p.type === type) || {}).value || "";
+      const day = toHebrewLetters(parseInt(get("day"), 10), false);
+      const month = get("month");
+      const year = toHebrewLetters(parseInt(get("year"), 10), true);
+
+      return `${day} ב${month} ${year}`;
     } catch (error) {
       return dateValue;
     }
