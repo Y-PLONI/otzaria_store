@@ -1,5 +1,5 @@
 (function () {
-  const DATA_URL = "data/plugins.json?v=20260428-3";
+  const DATA_URL = "data/plugins.json?v=20260428-4";
 
   const searchInput = document.getElementById("searchInput");
   const statusFilter = document.getElementById("statusFilter");
